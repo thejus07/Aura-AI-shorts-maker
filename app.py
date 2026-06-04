@@ -7,7 +7,7 @@ import streamlit as st
 import sys
 import subprocess
 try:
-    import moviepy
+    from moviepy.editor import VideoClip
 except ModuleNotFoundError:
     st.warning("moviepy not found! Current python environment:")
     st.write(f"Python version: {sys.version}")
