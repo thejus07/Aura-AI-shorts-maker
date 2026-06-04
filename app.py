@@ -22,6 +22,8 @@ except ModuleNotFoundError:
     if os.path.exists('requirements.txt'):
         with open('requirements.txt', 'r') as f:
             st.code(f.read())
+    st.stop()
+
 
 from pathlib import Path
 from config import (
