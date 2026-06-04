@@ -3,26 +3,6 @@ import json
 import logging
 import streamlit as st
 
-# Debugging environment info
-import sys
-import subprocess
-try:
-    from moviepy.editor import VideoClip
-except ModuleNotFoundError:
-    st.warning("moviepy not found! Current python environment:")
-    st.write(f"Python version: {sys.version}")
-    st.write(f"Python executable: {sys.executable}")
-    st.write("Installed packages:")
-    result = subprocess.run([sys.executable, "-m", "pip", "list"], capture_output=True, text=True)
-    st.text(result.stdout)
-    st.write("Pip error output:")
-    st.text(result.stderr)
-    st.write("Checking requirements.txt existence:")
-    st.write(f"requirements.txt exists: {os.path.exists('requirements.txt')}")
-    if os.path.exists('requirements.txt'):
-        with open('requirements.txt', 'r') as f:
-            st.code(f.read())
-    st.stop()
 
 
 from pathlib import Path
